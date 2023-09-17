@@ -1,0 +1,14 @@
+.blur {
+  width: 1192px;
+  height: 1192px;
+  border-radius: 1192px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(217, 217, 217, 0.06) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(30px);
+  content: "";
+  display: block;
+  position: absolute;
+}

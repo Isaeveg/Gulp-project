@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: var(--body-bg);
+  font-family: var(--ff);
+  color: var(--c-text);
+}
+.wrapper {
+  max-width: 1920px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  max-width: calc(1264px + 40px);
+  margin-inline: auto;
+  padding: 20px;
+}
+.main {
+  padding: 20px;
+}

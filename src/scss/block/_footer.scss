@@ -1,0 +1,115 @@
+.footer {
+  border-top: 1px solid var(--c-primary);
+
+  .footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 56px 20px 56px 20px;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__logo {
+      text-align: center;
+      color: var(--c-white);
+      font-family: var(--ff-second);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      div:last-child {
+        color: var(--c-white);
+        font-family: var(--ff);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: lowercase;
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &__nav {
+      display: flex;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+    &__ul {
+      display: flex;
+      gap: 56px;
+      align-items: center;
+
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+
+    &__a {
+      color: var(--c-header-link);
+      font-family: var(--ff);
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+
+      transition: var(--transition);
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: var(--c-primary);
+        bottom: -10px;
+        opacity: 0;
+        transition: var(--transition);
+      }
+    }
+
+    &__socials {
+      display: flex;
+      gap: 16px;
+      margin-left: 276px;
+
+      @include tablet {
+        margin-left: 0;
+      }
+    }
+  }
+}

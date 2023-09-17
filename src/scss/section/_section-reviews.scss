@@ -1,0 +1,150 @@
+.section-reviews {
+  .marquee {
+    overflow: hidden;
+  }
+  &__header,
+  &__footer {
+    background: var(--reviews-bg);
+    padding: 16px;
+    color: var(--c-primary);
+    font-family: var(--ff);
+    font-size: 53px;
+    font-weight: 400;
+    letter-spacing: 5.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: hidden;
+
+    @include tablet {
+      font-size: 35px;
+      letter-spacing: 4px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+
+    span:nth-child(even) {
+      color: var(--c-header-link);
+    }
+  }
+
+  &__footer {
+    color: var(--c-header-link);
+
+    span:nth-child(even) {
+      color: var(--c-primary);
+    }
+  }
+  &__slider {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    padding-left: 67px;
+    padding-right: 67px;
+
+    @include tablet-small {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    @include mobile {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.review-item {
+  padding: 32px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  gap: 24px;
+
+  @include tablet {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 110px;
+    img {
+      border-radius: 110px;
+    }
+  }
+
+  &__name {
+    color: var(--c-primary);
+    font-family: var(--ff);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  &__role {
+    color: var(--c-header-link);
+    font-family: var(--ff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: var(--c-text);
+    font-family: var(--ff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    img {
+      cursor: pointer;
+      transition: var(--transition);
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      &.dislike {
+        &:hover {
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+}
+
+#html .review-item__actions {
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #html .owl-prev {
+    left: -20px;
+  }
+
+  #html .owl-next {
+    right: -20px;
+  }
+}

@@ -1,0 +1,46 @@
+<header class="header container">
+  <a href="/" class="header__logo">
+    <div>FRONT-END</div>
+    <div>developer</div>
+  </a>
+  <div class="header__nav">
+    <div
+      class="header__backdrop"
+      id="headerBackdrop"
+      onclick="navToggle()"
+    ></div>
+    <ul class="header__ul" id="headerUl">
+      <li class="header__li"><a class="header__a" href="/">About</a></li>
+      <li class="header__li">
+        <a class="header__a _active" href="/">experience</a>
+      </li>
+      <li class="header__li"><a class="header__a" href="/">reviews</a></li>
+      <li class="header__li"><a class="header__a" href="/">contact</a></li>
+
+      <ul class="header__socials">
+        <li class="header__li">
+          <a href="/">
+            <img class="social-icon" src="img/socials/git.svg" alt="git" />
+          </a>
+        </li>
+        <li class="header__li">
+          <a href="/">
+            <img class="social-icon" src="img/socials/ln.svg" alt="ln" />
+          </a>
+        </li>
+        <li class="header__li">
+          <a href="/">
+            <img
+              class="social-icon"
+              src="img/socials/telegram.svg"
+              alt="telegram"
+            />
+          </a>
+        </li>
+      </ul>
+
+      <span class="material-icons icon-close" onclick="navToggle()">close</span>
+    </ul>
+    <span class="material-icons icon-menu" onclick="navToggle()">menu</span>
+  </div>
+</header>
