@@ -1,7 +1,5 @@
 .section-reviews {
-  .marquee {
-    overflow: hidden;
-  }
+  overflow: hidden;
   &__header,
   &__footer {
     background: var(--reviews-bg);
@@ -14,7 +12,6 @@
     text-transform: uppercase;
     white-space: nowrap;
     width: 100%;
-    overflow-x: hidden;
 
     @include tablet {
       font-size: 35px;
@@ -25,7 +22,9 @@
       font-size: 20px;
       letter-spacing: 3px;
     }
-
+    span:first-child {
+      margin-left: -57px;
+    }
     span:nth-child(even) {
       color: var(--c-header-link);
     }
@@ -36,6 +35,9 @@
 
     span:nth-child(even) {
       color: var(--c-primary);
+    }
+    span:first-child {
+      margin-left: -15px;
     }
   }
   &__slider {
@@ -56,7 +58,7 @@
   }
 }
 
-.review-item {
+.owl-carousel-item {
   padding: 32px;
   border-radius: 30px;
   border: 1px solid rgba(0, 0, 0, 0.05);
