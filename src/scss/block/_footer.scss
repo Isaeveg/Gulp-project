@@ -13,15 +13,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 15px;
     }
     &__logo {
       text-align: center;
       color: var(--c-white);
       font-family: var(--ff-second);
       font-size: 24px;
-      font-style: normal;
       font-weight: 400;
-      line-height: normal;
       text-transform: uppercase;
 
       @include mobile {
@@ -32,9 +31,7 @@
         color: var(--c-white);
         font-family: var(--ff);
         font-size: 16px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
         text-transform: lowercase;
 
         @include mobile {
@@ -105,7 +102,6 @@
     &__socials {
       display: flex;
       gap: 16px;
-      margin-left: 276px;
 
       @include tablet {
         margin-left: 0;
