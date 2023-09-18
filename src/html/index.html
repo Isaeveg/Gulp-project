@@ -17,14 +17,7 @@
     />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -38,10 +31,31 @@
       @@include('section/section-contacts.html') @@include('block/footer.html')
     </div>
 
-    <script src="./js/index.bundle.ajs"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
+      $(".owl-carousel").owlCarousel({
+        items: 2,
+        lazyLoad: true,
+        loop: true,
+        margin: 40,
+        nav: true,
+        navText: [
+          "<img src='img/arrow-left.svg' alt='arrow' />",
+          "<img src='img/arrow-right.svg' alt='arrow' />",
+        ],
+
+        responsive: {
+          0: {
+            items: 1,
+          },
+          480: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+        },
+      });
+
       function switchLight() {
         document.getElementById("btnSolution").classList.toggle("_active");
         document.getElementById("Lighter").classList.toggle("_active");
@@ -51,12 +65,6 @@
         document.getElementById("headerUl").classList.toggle("_active");
         document.getElementById("headerBackdrop").classList.toggle("_active");
       }
-      $(".owl-carousel").owlCarousel({
-        items: 4,
-        lazyLoad: true,
-        loop: true,
-        margin: 10,
-      });
     </script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -1671,7 +1679,10 @@
               }),
               this.core.$element.on(this.handlers);
           };
-          (e.Defaults = { animateOut: !1, animateIn: !1 }),
+          (e.Defaults = {
+            animateOut: !1,
+            animateIn: !1,
+          }),
             (e.prototype.swap = function () {
               if (
                 1 === this.core.settings.items &&
@@ -2243,5 +2254,21 @@
               (a.support.transform3d = j.csstransforms3d()));
         })(window.Zepto || window.jQuery, window, document);
     </script>
+    <script src="index.js"></script>
+    <script>
+      AOS.init();
+
+      function navToggle() {
+        document.getElementById("headerUl").classList.toggle("_active");
+        document.getElementById("headerBackdrop").classList.toggle("_active");
+      }
+
+      function switchLight() {
+        document.getElementById("Lighter").classList.toggle("_active");
+        document.getElementById("btnSolution").classList.toggle("_active");
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   </body>
 </html>

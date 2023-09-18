@@ -40,6 +40,7 @@
       margin-left: -15px;
     }
   }
+
   &__slider {
     margin-top: 110px;
     margin-bottom: 110px;
@@ -58,7 +59,7 @@
   }
 }
 
-.owl-carousel-item {
+.review-item {
   padding: 32px;
   border-radius: 30px;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -68,7 +69,6 @@
 
   @include tablet {
     flex-direction: column;
-    padding: 20px;
   }
 
   &__img {
@@ -119,17 +119,6 @@
     gap: 16px;
     img {
       cursor: pointer;
-      transition: var(--transition);
-
-      &:hover {
-        transform: translateY(-5px);
-      }
-
-      &.dislike {
-        &:hover {
-          transform: translateY(5px);
-        }
-      }
     }
   }
 }
@@ -148,5 +137,18 @@
 
   #html .owl-next {
     right: -20px;
+  }
+}
+
+.owl-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(535px, 1fr));
+  gap: 30px;
+
+  @include tablet-small {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  }
+  @include mobile-small {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
