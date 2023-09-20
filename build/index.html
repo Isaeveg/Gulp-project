@@ -28,6 +28,7 @@
     <div>FRONT-END</div>
     <div>developer</div>
   </a>
+  <div class="header__backdrop" id="headerBackdrop" onclick="navToggle()"></div>
   <div class="header__nav">
     <ul class="header__ul" id="headerUl">
       <li class="header__li"><a class="header__a" href="/">About</a></li>
@@ -483,6 +484,14 @@
     </div>
 
     <script>
+      $("headerUl").on("change", function () {
+        $("body").css(
+          "overflow",
+          $(this).prop("checked") === true ? "hidden" : ""
+        );
+      });
+    </script>
+    <script>
       $(".owl-carousel").owlCarousel({
         items: 2,
         lazyLoad: true,
@@ -493,18 +502,6 @@
           "<img src='img/arrow-left.svg' alt='arrow' />",
           "<img src='img/arrow-right.svg' alt='arrow' />",
         ],
-
-        responsive: {
-          0: {
-            items: 1,
-          },
-          480: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-        },
       });
 
       function switchLight() {

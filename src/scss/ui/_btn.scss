@@ -75,11 +75,10 @@
   @include mobile {
     padding: 20px 40px;
     font-size: 30px;
+   
   }
 
-  &:hover {
-    transform: translateY(-5px);
-  }
+  
 
   img {
     transition: var(--transition);
